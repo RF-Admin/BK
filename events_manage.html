@@ -4,49 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Manage Events</h1>
-    <form method="POST" action="events_manage_process.php">
-        <label for="event_id">Event ID:</label>
-        <input type="number" id="event_id" name="event_id" required><br>
-
-        <label for="action">Action:</label>
-        <select id="action" name="action" required>
-            <option value="update">Update</option>
-            <option value="delete">Delete</option>
-        </select><br>
-
-        <div id="updateFields" style="display:none;">
-            <label for="start_time">Start Time:</label>
-            <input type="time" id="start_time" name="start_time"><br>
-
-            <label for="end_time">End Time:</label>
-            <input type="time" id="end_time" name="end_time"><br>
-
-            <label for="event_type">Event Type:</label>
-            <select id="event_type" name="event_type">
-                <option value="DUPR">DUPR</option>
-                <option value="Social">Social</option>
-                <option value="Competition">Competition</option>
-            </select><br>
-
-            <label for="max_players">Max Players:</label>
-            <input type="number" id="max_players" name="max_players"><br>
-        </div>
-
-        <input type="submit" value="Submit">
-    </form>
-
-    <script>
-        document.getElementById('action').addEventListener('change', function() {
-            if (this.value === 'update') {
-                document.getElementById('updateFields').style.display = 'block';
-            } else {
-                document.getElementById('updateFields').style.display = 'none';
-            }
-        });
-    </script>
-</body>
-</html>
-
+    <div class="container mt-5">
+        <h1 class="mb-4">Manage Events</h1>
+        <form method="POST" action="events_manage_process.php" class="needs-validation
